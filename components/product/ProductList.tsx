@@ -1,20 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import {
-  Box,
-  Button,
-  Card,
-  CardActionArea,
-  CardContent,
-  CardMedia,
-  Container,
-  Grid,
-  Typography,
-} from "@mui/material";
-import Header from "../utils/Header";
-import Image from "next/image";
-import Link from "next/link";
-import { ProductItemProps } from "@/constants/types";
+import { Box, Button, Grid } from "@mui/material";
+
 import ProductItem from "./ProductItem";
 
 const ProductList = ({ noPagine }: { noPagine: boolean }) => {

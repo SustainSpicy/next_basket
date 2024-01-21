@@ -142,6 +142,7 @@ const Page = ({ params }: any) => {
 
               <Typography
                 variant="body2"
+                component={"div"}
                 sx={{
                   color: "#737373",
                   fontWeight: "700",

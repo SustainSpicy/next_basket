@@ -37,7 +37,7 @@ const CartModal: React.FC<CartModalProps> = ({ isOpen, onClose }) => {
     >
       <Card sx={{ minWidth: "300px", padding: 2 }}>
         <StyledHeading variant="h6">Shopping Cart</StyledHeading>
-        <Typography variant="subtitle2">
+        <Typography variant="subtitle2" component="div">
           <hr />
         </Typography>
         {cartItems.length > 0 ? (
@@ -50,13 +50,13 @@ const CartModal: React.FC<CartModalProps> = ({ isOpen, onClose }) => {
                   handleRemoveFromCart={handleRemoveFromCart}
                   handleUpdateQuantity={handleUpdateQuantity}
                 />
-                <Typography variant="subtitle2">
+                <Typography variant="subtitle2" component="div">
                   <hr />
                 </Typography>
               </>
             ))}
             <Stack spacing={2}>
-              <Typography variant="subtitle2">
+              <Typography variant="subtitle2" component="div">
                 <hr />
               </Typography>
               <Typography

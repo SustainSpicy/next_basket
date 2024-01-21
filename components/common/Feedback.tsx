@@ -1,13 +1,5 @@
 "use client";
-import {
-  Box,
-  Container,
-  Grid,
-  ImageList,
-  ImageListItem,
-  Stack,
-  Typography,
-} from "@mui/material";
+import { Box, Container, Grid, Stack } from "@mui/material";
 import Image from "next/image";
 import frame from "../../public/img/frame.png";
 import user from "../../public/img/user.jpg";

@@ -23,6 +23,7 @@ const CTA = () => {
           </StyledSpan1>
           <Typography
             variant="body2"
+            component="div"
             sx={{
               fontSize: "40px",
               fontWeight: "700",

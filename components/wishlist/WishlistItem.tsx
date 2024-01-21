@@ -1,10 +1,6 @@
 import { ProductItemProps } from "@/constants/types";
 import { AddIcCallOutlined, RemoveCircleOutline } from "@mui/icons-material";
 import {
-  Badge,
-  Box,
-  Button,
-  ButtonGroup,
   Card,
   CardContent,
   CardMedia,
@@ -15,11 +11,9 @@ import {
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import React from "react";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import RemoveIcon from "@mui/icons-material/Remove";
-import AddIcon from "@mui/icons-material/Add";
+
 import DeleteIcon from "@mui/icons-material/Delete";
-import { removeFromWishlist } from "@/redux/slices/wishlistSlice";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",

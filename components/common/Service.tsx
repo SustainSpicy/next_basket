@@ -57,10 +57,26 @@ const ServiceItem = ({ img, title, desc }: any) => {
             textAlign: "center",
           }}
         >
-          <StyledHeading gutterBottom variant="h5" fontSize={16}>
+          <Typography
+            gutterBottom
+            component="div"
+            variant="h5"
+            fontSize={16}
+            sx={{
+              display: "flex",
+              fontWeight: 700,
+              color: "#252B42",
+              textDecoration: "none",
+            }}
+          >
             {title}
-          </StyledHeading>
-          <Typography gutterBottom variant="body2" fontSize={12}>
+          </Typography>
+          <Typography
+            gutterBottom
+            component="div"
+            variant="body2"
+            fontSize={12}
+          >
             {desc}
           </Typography>
         </CardContent>

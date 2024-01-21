@@ -53,7 +53,7 @@ const FeatureItem = ({ img }: any) => {
           padding: "2px",
         }}
       >
-        <Typography variant="body2" color={"#fff"}>
+        <Typography variant="body2" component="div" color={"#fff"}>
           New
         </Typography>
       </Box>
@@ -82,14 +82,36 @@ const FeatureItem = ({ img }: any) => {
           alignItems={"center"}
           justifyContent={"space-between"}
         >
-          <StyledSpan4 gutterBottom variant="body2" color={"#8EC2F2"}>
+          <Typography
+            gutterBottom
+            variant="body2"
+            component="div"
+            sx={{
+              fontSize: "12px",
+              fonStyle: "normal",
+              fontWeight: 400,
+              letterSpacing: "0.2px",
+              color: "#8EC2F2",
+            }}
+          >
             <AccessAlarmIcon fontSize="small" style={{ color: "#23A6F0" }} /> 22
             April 2021
-          </StyledSpan4>
-          <StyledSpan4 gutterBottom variant="body2" color={"#8EC2F2"}>
+          </Typography>
+          <Typography
+            gutterBottom
+            variant="body2"
+            component="div"
+            sx={{
+              fontSize: "12px",
+              fonStyle: "normal",
+              fontWeight: 400,
+              letterSpacing: "0.2px",
+              color: "#8EC2F2",
+            }}
+          >
             <TimelineIcon fontSize="small" style={{ color: "#23856D" }} /> 10
             comments
-          </StyledSpan4>
+          </Typography>
         </Stack>
       </CardContent>
       <CardActions>

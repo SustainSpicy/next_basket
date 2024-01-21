@@ -5,17 +5,10 @@ import {
   Box,
   Toolbar,
   Typography,
-  Button,
   Container,
   IconButton,
-  Menu,
-  MenuItem,
-  Badge,
-  BadgeProps,
 } from "@mui/material";
-import { styled } from "@mui/material/styles";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import makeStyles from "@mui/styles/makeStyles";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
@@ -38,9 +31,7 @@ import {
   StyledSpan2,
 } from "../../styles/styles";
 
-const MobileNav = () => {};
 const Navbar: React.FC = () => {
-  const classes = useStyles();
   const [toggleNav, setToggleNav] = useState(false);
   const [isCartModalOpen, setCartModalOpen] = useState(false);
   const [isWishlistModalOpen, setWishlistModalOpen] = useState(false);

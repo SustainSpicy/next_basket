@@ -5,16 +5,7 @@ import {
   selectWishlistTotalPrice,
 } from "@/redux/slices/wishlistSlice";
 import { RootState } from "@/redux/store";
-import {
-  Box,
-  Card,
-  CardContent,
-  CardMedia,
-  Grid,
-  Modal,
-  Stack,
-  Typography,
-} from "@mui/material";
+import { Card, Modal, Stack, Typography } from "@mui/material";
 import { StyledHeading, StyledSpan2 } from "@/styles/styles";
 import WishlistItem from "./WishlistItem";
 

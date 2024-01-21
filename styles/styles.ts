@@ -70,7 +70,6 @@ export const StyledSpan4 = styled(Typography)(({ theme }) => ({
   fontSize: "12px",
   fonStyle: "normal",
   fontWeight: 400,
-
   letterSpacing: "0.2px",
   color: "#737373",
 }));

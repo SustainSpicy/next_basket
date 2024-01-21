@@ -29,8 +29,8 @@ const Service = () => {
         alignItems={{ xs: "center" }}
         py={12}
       >
-        {ServiceObj.map((item) => {
-          return <ServiceItem key={item.img} {...item} />;
+        {ServiceObj.map((item, index) => {
+          return <ServiceItem key={index} {...item} />;
         })}
       </Stack>
     </Container>

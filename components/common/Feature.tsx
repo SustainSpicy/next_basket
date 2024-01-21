@@ -31,8 +31,8 @@ const Feature = () => {
         gap={2}
         py={12}
       >
-        {featureData.map((item) => {
-          return <FeatureItem key={item.img} img={item.img} />;
+        {featureData.map((item, index) => {
+          return <FeatureItem key={index} img={item.img} />;
         })}
       </Stack>
     </Container>

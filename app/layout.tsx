@@ -1,12 +1,7 @@
 import type { Metadata } from "next";
-import Document, { Html, Head, Main, NextScript } from "next/document";
+
 import "../styles/globals.css";
-import { CssBaseline } from "@mui/material";
-import Navbar from "@/components/navbar/Navbar";
-import { Provider } from "react-redux";
-import store from "@/redux/store";
 import MainProvider from "@/Provider";
-import { ServerStyleSheets } from "@mui/styles";
 import React from "react";
 
 export const metadata: Metadata = {
@@ -20,23 +15,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <head>
-        <link
-          rel="stylesheet"
-          type="text/css"
-          // charset="UTF-8"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-        />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-        />
-      </head>
-      <body>
-        <MainProvider>{children}</MainProvider>
-      </body>
-    </html>
+    <MainProvider>
+      <html lang="en">
+        <head>
+          <link
+            rel="stylesheet"
+            type="text/css"
+            // charset="UTF-8"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+          />
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+          />
+        </head>
+        <body>{children}</body>
+      </html>
+    </MainProvider>
   );
 }

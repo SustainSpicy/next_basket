@@ -24,7 +24,7 @@ import { ProductList, Sponsors } from "@/components";
 import Breadcrumb from "@/components/utils/Breadcrumb";
 import { useAlertContext } from "@/Provider/AlertContext";
 
-const page = ({ params }: any) => {
+const Page = ({ params }: any) => {
   const dispatch = useDispatch();
   const { handleAlertOpen } = useAlertContext();
   const { id } = params;
@@ -272,4 +272,4 @@ const page = ({ params }: any) => {
   );
 };
 
-export default page;
+export default Page;

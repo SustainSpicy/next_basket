@@ -1,7 +1,6 @@
 "use client";
 import {
   Box,
-  Grid,
   Container,
   ImageList,
   ImageListItem,
@@ -70,7 +69,6 @@ const Hero = () => {
               {...srcset(item.img.src, 121, item.rows, item.cols)}
               alt={item.title}
               loading="lazy"
-              // style={{ objectFit: "cover" }}
             />
           </ImageListItem>
         ))}

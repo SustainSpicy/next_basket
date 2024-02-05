@@ -1,5 +1,4 @@
-import { ProductItemProps } from "@/constants/types";
-import { AddIcCallOutlined, RemoveCircleOutline } from "@mui/icons-material";
+import React from "react";
 import {
   Badge,
   Box,
@@ -14,11 +13,11 @@ import {
   Typography,
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import React from "react";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import RemoveIcon from "@mui/icons-material/Remove";
 import AddIcon from "@mui/icons-material/Add";
 import DeleteIcon from "@mui/icons-material/Delete";
+import { ProductItemProps } from "@/constants/types";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -40,6 +39,7 @@ interface CartProps extends ProductItemProps {
   handleRemoveFromCart: (item: number) => void;
   handleUpdateQuantity: (id: number, quantity: number) => void;
 }
+
 const CartItem = ({
   thumbnail,
   title,
@@ -83,9 +83,8 @@ const CartItem = ({
             >
               Quantity
             </Typography>
-
             <Typography variant="h6" component="div" color="secondary">
-              <Badge color="secondary" badgeContent={quantity}></Badge>
+              {/* <Badge color="secondary" badgeContent={quantity}></Badge> */}
             </Typography>
           </Stack>
           <Stack
@@ -94,19 +93,11 @@ const CartItem = ({
             justifyContent={"space-between"}
           >
             <ButtonGroup>
-              <Button
-                onClick={() => {
-                  handleUpdateQuantity(id, quantity - 1);
-                }}
-              >
+              <Button onClick={() => handleUpdateQuantity(id, quantity - 1)}>
                 {" "}
                 <RemoveIcon fontSize="small" />
               </Button>
-              <Button
-                onClick={() => {
-                  handleUpdateQuantity(id, quantity + 1);
-                }}
-              >
+              <Button onClick={() => handleUpdateQuantity(id, quantity + 1)}>
                 {" "}
                 <AddIcon fontSize="small" />
               </Button>
@@ -127,7 +118,6 @@ const CartItem = ({
             >
               Price
             </Typography>
-
             <Typography variant="h6" component="div" color="secondary">
               ${price}
             </Typography>

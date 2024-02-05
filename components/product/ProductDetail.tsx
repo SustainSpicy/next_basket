@@ -1,5 +1,4 @@
-import { StyledSpan1, StyledSpan3 } from "@/styles/styles";
-import { Container, Grid, Stack, Typography } from "@mui/material";
+import { Grid, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import background2 from "../../public/img/background2.png";
@@ -7,9 +6,15 @@ const ProductDetail = () => {
   return (
     <Stack sx={{ paddingX: "1rem", paddingY: "2rem" }} spacing={2}>
       <Stack direction={"row"} justifyContent={"space-around"}>
-        <StyledSpan3 variant="body1">Description</StyledSpan3>
-        <StyledSpan3 variant="body1">Additional Information</StyledSpan3>
-        <StyledSpan3 variant="body1">Reviews (0)</StyledSpan3>
+        <Typography variant="subtitle2" color={"#737373"}>
+          Description
+        </Typography>
+        <Typography variant="subtitle2" color={"#737373"}>
+          Additional Information
+        </Typography>
+        <Typography variant="subtitle2" color={"#737373"}>
+          Reviews (0)
+        </Typography>
       </Stack>
       <Typography variant="subtitle2">
         <hr />
@@ -42,24 +47,25 @@ const ProductDetail = () => {
               the quick fox jumps over
             </Typography>
 
-            <StyledSpan3 variant="body2">
+            <Typography variant="subtitle2" color={"#737373"}>
               Met minim Mollie non desert Alamo est sit cliquey dolor do met
               sent. RELIT official consequent door ENIM RELIT Mollie. Excitation
               venial consequent sent nostrum met.
-            </StyledSpan3>
-            <StyledSpan3
+            </Typography>
+            <Typography
+              color={"#737373"}
               variant="body2"
               style={{ paddingLeft: "1rem", borderLeft: "2px solid #23856D" }}
             >
               Met minim Mollie non desert Alamo est sit cliquey dolor do met
               sent. RELIT official consequent door ENIM RELIT Mollie. Excitation
               venial consequent sent nostrum met.
-            </StyledSpan3>
-            <StyledSpan3 variant="body2">
+            </Typography>
+            <Typography variant="body2" color={"#737373"}>
               Met minim Mollie non desert Alamo est sit cliquey dolor do met
               sent. RELIT official consequent door ENIM RELIT Mollie. Excitation
               venial consequent sent nostrum met.
-            </StyledSpan3>
+            </Typography>
           </Stack>
         </Grid>
         <Grid

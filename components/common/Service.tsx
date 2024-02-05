@@ -9,8 +9,7 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import Header from "../utils/Header";
-import { StyledHeading } from "@/styles/styles";
+import Header from "./Header";
 import reader from "../../public/img/reader.png";
 import book from "../../public/img/book.png";
 import growth from "../../public/img/growth.png";

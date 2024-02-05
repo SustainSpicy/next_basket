@@ -1,6 +1,6 @@
 "use client";
 import { Box, Container } from "@mui/material";
-import Header from "../utils/Header";
+import Header from "../common/Header";
 import ProductList from "./ProductList";
 
 const Products = () => {

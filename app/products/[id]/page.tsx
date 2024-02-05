@@ -18,11 +18,11 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "@/redux/slices/cartSlice";
 import { addToWishlist } from "@/redux/slices/wishlistSlice";
 import { Product, ProductItemProps } from "@/constants/types";
-import ReviewStar from "@/components/utils/ReviewStar";
+import ReviewStar from "@/components/common/ReviewStar";
 import ProductDetail from "@/components/product/ProductDetail";
 import { ProductList, Sponsors } from "@/components";
-import Breadcrumb from "@/components/utils/Breadcrumb";
 import { useAlertContext } from "@/Provider/AlertContext";
+import Breadcrumb from "@/components/common/Breadcrumb";
 
 const Page = ({ params }: any) => {
   const dispatch = useDispatch();
@@ -44,6 +44,7 @@ const Page = ({ params }: any) => {
     };
 
     if (id) fetchProduct();
+    // eslint-disable-next-line
   }, [id]);
 
   const settings = {
@@ -142,7 +143,7 @@ const Page = ({ params }: any) => {
 
               <Typography
                 variant="body2"
-                component={"div"}
+                component="div"
                 sx={{
                   color: "#737373",
                   fontWeight: "700",
@@ -160,9 +161,15 @@ const Page = ({ params }: any) => {
               >
                 $ {selectedProduct?.price}
               </Typography>
-              <Typography variant="body2" color={"#737373"} fontSize={"14px"}>
+              <Typography
+                component={"div"}
+                variant="body2"
+                color={"#737373"}
+                fontSize={"14px"}
+              >
                 Availability :{" "}
                 <Typography
+                  component={"div"}
                   variant="body2"
                   sx={{ color: "#23A6F0", display: "inline" }}
                 >

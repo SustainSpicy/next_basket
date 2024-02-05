@@ -6,7 +6,6 @@ import {
 } from "@/redux/slices/wishlistSlice";
 import { RootState } from "@/redux/store";
 import { Card, Modal, Stack, Typography } from "@mui/material";
-import { StyledHeading, StyledSpan2 } from "@/styles/styles";
 import WishlistItem from "./WishlistItem";
 
 interface WishlistModalProps {
@@ -27,24 +26,23 @@ const WishlistModal: React.FC<WishlistModalProps> = ({ isOpen, onClose }) => {
   return (
     <Modal open={isOpen} onClose={onClose}>
       <Card sx={{ minWidth: "300px", padding: 2 }}>
-        <StyledHeading variant="h6">Wishlist</StyledHeading>
+        <Typography variant="h2">Wishlist</Typography>
         <Typography variant="subtitle2">
           <hr />
         </Typography>
         {wishlistItems.length > 0 ? (
           <>
             {wishlistItems.map((item) => (
-              <>
+              <div key={item.id}>
                 {" "}
                 <WishlistItem
-                  key={item.id}
                   {...item}
                   handleRemoveFromWishlist={handleRemoveFromWishlist}
                 />
                 <Typography variant="subtitle2">
                   <hr />
                 </Typography>
-              </>
+              </div>
             ))}
             <Stack spacing={2}>
               <Typography variant="subtitle2">
@@ -60,9 +58,9 @@ const WishlistModal: React.FC<WishlistModalProps> = ({ isOpen, onClose }) => {
             </Stack>
           </>
         ) : (
-          <StyledSpan2 variant="h6" mt={4}>
+          <Typography variant="h6" mt={4}>
             Your wishlist is empty
-          </StyledSpan2>
+          </Typography>
         )}
       </Card>
     </Modal>

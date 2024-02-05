@@ -11,8 +11,7 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import Header from "../utils/Header";
-import { StyledSpan3, StyledSpan4 } from "@/styles/styles";
+import Header from "./Header";
 import AccessAlarmIcon from "@mui/icons-material/AccessAlarm";
 import TimelineIcon from "@mui/icons-material/Timeline";
 import image5 from "../../public/img/image5.png";
@@ -60,23 +59,23 @@ const FeatureItem = ({ img }: any) => {
       <CardMedia sx={{ height: 140 }} image={img.src} title="green iguana" />
       <CardContent>
         <Stack flexDirection={"row"} gap={2}>
-          <StyledSpan4 gutterBottom variant="body2" sx={{ color: "#8EC2F2" }}>
+          <Typography gutterBottom variant="caption" sx={{ color: "#8EC2F2" }}>
             Google
-          </StyledSpan4>
-          <StyledSpan4 gutterBottom variant="body2">
+          </Typography>
+          <Typography gutterBottom variant="caption">
             Trending
-          </StyledSpan4>
-          <StyledSpan4 gutterBottom variant="body2">
+          </Typography>
+          <Typography gutterBottom variant="caption">
             New
-          </StyledSpan4>
+          </Typography>
         </Stack>
         <Typography gutterBottom variant="h5" component="div">
           Title
         </Typography>
-        <StyledSpan3 gutterBottom variant="body2" sx={{ fontSize: "10px" }}>
+        <Typography gutterBottom variant="body2" sx={{ fontSize: "10px" }}>
           Lizards are a widespread group of squamate reptiles, with over 6,000
           species, ranging across all continents except Antarctica
-        </StyledSpan3>
+        </Typography>
         <Stack
           flexDirection={"row"}
           alignItems={"center"}

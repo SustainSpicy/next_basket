@@ -6,24 +6,25 @@ import { Provider } from "react-redux";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Footer from "@/components/Footer";
 import AlertProvider from "./AlertContext";
+import { theme } from "@/constants/globalTheme";
 
 const MainProvider = ({ children }: any) => {
-  const theme = createTheme({
-    palette: {
-      primary: {
-        main: "#23856D",
-      },
-      secondary: {
-        main: "#23A6F0",
-      },
-      common: {
-        white: "#ffffff",
-      },
-      text: {
-        primary: "#252B42",
-      },
-    },
-  });
+  // const theme = createTheme({
+  //   palette: {
+  //     primary: {
+  //       main: "#23856D",
+  //     },
+  //     secondary: {
+  //       main: "#23A6F0",
+  //     },
+  //     common: {
+  //       white: "#ffffff",
+  //     },
+  //     text: {
+  //       primary: "#252B42",
+  //     },
+  //   },
+  // });
 
   return (
     <Provider store={store}>

@@ -1,9 +1,14 @@
 "use client";
-import { StyledHeading, StyledSpan1, StyledSpan3 } from "@/styles/styles";
-import { Box, Button, Container, Grid, Stack, TextField } from "@mui/material";
+import {
+  Box,
+  Container,
+  Grid,
+  Stack,
+  TextField,
+  Typography,
+} from "@mui/material";
 import React from "react";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import YouTubeIcon from "@mui/icons-material/YouTube";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 
@@ -14,9 +19,9 @@ const Footer = () => {
         <Container>
           <Stack direction={"row"}>
             <Box>
-              <StyledHeading variant="h6" noWrap sx={{}}>
+              <Typography variant="h2" noWrap sx={{}}>
                 Bandage
-              </StyledHeading>
+              </Typography>
             </Box>
 
             <Box
@@ -41,44 +46,82 @@ const Footer = () => {
         <Container>
           <Grid container rowGap={2}>
             <Grid item xs={12} sm={2.3}>
-              <Stack spacing={1}>
-                <StyledSpan1 variant="body2">Company Info</StyledSpan1>
-                <StyledSpan3 variant="body2">About Us</StyledSpan3>
-                <StyledSpan3 variant="body2">Carrier</StyledSpan3>
-                <StyledSpan3 variant="body2">We are hiring</StyledSpan3>
-                <StyledSpan3 variant="body2">Blog</StyledSpan3>
+              <Stack>
+                <Typography variant="h4">Company Info</Typography>
+                <Typography variant="subtitle2" color={"#737373"}>
+                  About Us
+                </Typography>
+                <Typography variant="subtitle2" color={"#737373"}>
+                  Carrier
+                </Typography>
+                <Typography variant="subtitle2" color={"#737373"}>
+                  We are hiring
+                </Typography>
+                <Typography variant="subtitle2" color={"#737373"}>
+                  Blog
+                </Typography>
               </Stack>
             </Grid>
             <Grid item xs={12} sm={2.3}>
-              <Stack spacing={1}>
-                <StyledSpan1 variant="body2">Legal</StyledSpan1>
-                <StyledSpan3 variant="body2">About Us</StyledSpan3>
-                <StyledSpan3 variant="body2">Carrier</StyledSpan3>
-                <StyledSpan3 variant="body2">We are hiring</StyledSpan3>
-                <StyledSpan3 variant="body2">Blog</StyledSpan3>
+              <Stack>
+                <Typography variant="h4">Legal</Typography>
+                <Typography variant="subtitle2" color={"#737373"}>
+                  About Us
+                </Typography>
+                <Typography variant="subtitle2" color={"#737373"}>
+                  Blog
+                </Typography>
+                <Typography variant="subtitle2" color={"#737373"}>
+                  Carrier
+                </Typography>
+                <Typography variant="subtitle2" color={"#737373"}>
+                  We are hiring
+                </Typography>
               </Stack>
             </Grid>
             <Grid item xs={12} sm={2.3}>
-              <Stack spacing={1}>
-                <StyledSpan1 variant="body2">Features</StyledSpan1>
-                <StyledSpan3 variant="body2">Business Marketing</StyledSpan3>
-                <StyledSpan3 variant="body2">User Analytic</StyledSpan3>
-                <StyledSpan3 variant="body2">Live Chat</StyledSpan3>
-                <StyledSpan3 variant="body2">Unlimited Support</StyledSpan3>
+              <Stack>
+                <Typography variant="h4">Features</Typography>
+                <Typography variant="subtitle2" color={"#737373"}>
+                  Business Marketing
+                </Typography>
+                <Typography variant="subtitle2" color={"#737373"}>
+                  User Analytic
+                </Typography>
+                <Typography variant="subtitle2" color={"#737373"}>
+                  Live Chat
+                </Typography>
+                <Typography variant="subtitle2" color={"#737373"}>
+                  Unlimited Support
+                </Typography>
               </Stack>
             </Grid>
             <Grid item xs={12} sm={2.3}>
-              <Stack spacing={1}>
-                <StyledSpan1 variant="body2">Resources</StyledSpan1>
-                <StyledSpan3 variant="body2">IOS & Android</StyledSpan3>
-                <StyledSpan3 variant="body2">Watch a Demo</StyledSpan3>
-                <StyledSpan3 variant="body2">Customers</StyledSpan3>
-                <StyledSpan3 variant="body2">Api</StyledSpan3>
+              <Stack>
+                <Typography variant="h4">Features</Typography>
+                <Typography variant="subtitle2" color={"#737373"}>
+                  Resources
+                </Typography>
+                <Typography variant="subtitle2" color={"#737373"}>
+                  IOS & Android
+                </Typography>
+                <Typography variant="subtitle2" color={"#737373"}>
+                  Watch a Demo
+                </Typography>
+                <Typography variant="subtitle2" color={"#737373"}>
+                  Unlimited Support
+                </Typography>
+                <Typography variant="subtitle2" color={"#737373"}>
+                  Customers
+                </Typography>
+                <Typography variant="subtitle2" color={"#737373"}>
+                  Api
+                </Typography>
               </Stack>
             </Grid>
             <Grid item xs={12} sm={2.6}>
               <Stack spacing={1}>
-                <StyledSpan1 variant="body2">Get In Touch </StyledSpan1>
+                <Typography variant="h4">Get In Touch </Typography>
                 <Stack direction={"row"}>
                   <TextField
                     id="outlined-basic"
@@ -98,10 +141,9 @@ const Footer = () => {
                     Subscribe
                   </button>
                 </Stack>
-
-                <StyledSpan3 variant="body2">
+                <Typography variant="subtitle2" color={"#737373"}>
                   Lore imp sum dolor Amit
-                </StyledSpan3>
+                </Typography>
               </Stack>
             </Grid>
           </Grid>
@@ -109,9 +151,9 @@ const Footer = () => {
       </Box>
       <Box>
         <Container>
-          <StyledSpan3 variant="body2">
+          <Typography variant="subtitle2" color={"#737373"}>
             Made With Love By Finland All Right Reserved{" "}
-          </StyledSpan3>
+          </Typography>
         </Container>
       </Box>
     </Stack>

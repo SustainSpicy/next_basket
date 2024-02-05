@@ -41,7 +41,7 @@ const ProductItem = ({
             <CardContent>
               <Typography
                 gutterBottom
-                variant="h5"
+                variant="h3"
                 component="div"
                 fontSize={16}
               >

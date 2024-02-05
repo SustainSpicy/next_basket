@@ -1,13 +1,12 @@
+import React from "react";
 import {
   removeFromCart,
   selectCartTotalPrice,
   updateCartItemQuantity,
 } from "@/redux/slices/cartSlice";
 import { RootState } from "@/redux/store";
-import { StyledHeading, StyledSpan2 } from "@/styles/styles";
 import { Modal, Stack, Typography } from "@mui/material";
 import Card from "@mui/material/Card";
-import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import CartItem from "./CartItem";
 
@@ -36,16 +35,15 @@ const CartModal: React.FC<CartModalProps> = ({ isOpen, onClose }) => {
       sx={{ display: "flex", justifyContent: "flex-end" }}
     >
       <Card sx={{ minWidth: "300px", padding: 2 }}>
-        <StyledHeading variant="h6">Shopping Cart</StyledHeading>
+        <Typography variant="h2">Shopping Cart</Typography>
         <Typography variant="subtitle2" component="div">
           <hr />
         </Typography>
         {cartItems.length > 0 ? (
           <>
             {cartItems.map((item, index) => (
-              <>
+              <div key={index}>
                 <CartItem
-                  key={index}
                   {...item}
                   handleRemoveFromCart={handleRemoveFromCart}
                   handleUpdateQuantity={handleUpdateQuantity}
@@ -53,7 +51,7 @@ const CartModal: React.FC<CartModalProps> = ({ isOpen, onClose }) => {
                 <Typography variant="subtitle2" component="div">
                   <hr />
                 </Typography>
-              </>
+              </div>
             ))}
             <Stack spacing={2}>
               <Typography variant="subtitle2" component="div">
@@ -69,9 +67,9 @@ const CartModal: React.FC<CartModalProps> = ({ isOpen, onClose }) => {
             </Stack>
           </>
         ) : (
-          <StyledSpan2 variant="h6" mt={4}>
+          <Typography variant="h6" mt={4}>
             Your cart is empty
-          </StyledSpan2>
+          </Typography>
         )}
       </Card>
     </Modal>

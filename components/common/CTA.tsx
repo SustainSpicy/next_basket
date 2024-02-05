@@ -2,7 +2,7 @@
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import React from "react";
 import background from "../../public/img/background.png";
-import { StyledSpan1, StyledSpan3 } from "@/styles/styles";
+
 const CTA = () => {
   return (
     <Box
@@ -18,9 +18,13 @@ const CTA = () => {
     >
       <Container sx={{ display: "flex", justifyContent: "center" }}>
         <Stack spacing={6} maxWidth={"550px"} alignItems={"center"}>
-          <StyledSpan1 variant="body2" color={"#23A6F0"} textAlign={"center"}>
+          <Typography
+            variant="subtitle1"
+            color={"#23A6F0"}
+            textAlign={"center"}
+          >
             Designing Better Experience
-          </StyledSpan1>
+          </Typography>
           <Typography
             variant="body2"
             component="div"
@@ -35,13 +39,17 @@ const CTA = () => {
           >
             Problems trying to resolve the conflict between
           </Typography>
-          <StyledSpan3 variant="body2" textAlign={"center"}>
+          <Typography
+            variant="subtitle2"
+            color={"#737373"}
+            textAlign={"center"}
+          >
             Problems trying to resolve the conflict between the two major realms
             of Classical physics:
-          </StyledSpan3>
-          <StyledSpan1 variant="body2" color={"#23856D"} textAlign={"center"}>
+          </Typography>
+          <Typography variant="body2" color={"#23856D"} textAlign={"center"}>
             $16.48
-          </StyledSpan1>
+          </Typography>
           <button
             style={{
               width: "fit-content",
